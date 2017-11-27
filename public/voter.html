@@ -9,12 +9,15 @@
 	<h1>Voter Interface</h2>
 	<h2>Canidates</h2>
 
+<form ng-submit="addVotes()">
   <div ng-repeat="comment in comments | orderBy: '-upvotes'">
 <!---    <span class="glyphicon glyphicon-remove" ng-click="delete(comment)"></span>
     <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(comment)"></span>
-   --> {{comment.title}} - upvotes: {{comment.upvotes}}
+   --> <input type="checkbox"> {{comment.title}} 
   </div>
-
+<button name="submit">Submit Ballot</button>
+</form>
+<h2>Submitted Ballot</h2>
 
 </body>
 </html>

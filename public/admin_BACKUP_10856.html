@@ -8,6 +8,7 @@
 </head>
 
 <body ng-app="comment" ng-controller="MainCtrl">
+<<<<<<< HEAD
 	<div class="container">
   		<div class="jumbotron">
 			<h1>Store Management Interface</h1>
@@ -25,7 +26,7 @@
 			</div>
 			<div class="col">
 				<h2>Current Products</h2>
-		  <div ng-repeat="comment in comments | orderBy: 'title'">
+		  <div ng-repeat="comment in comments | orderBy: '-title'">
 			<span class="glyphicon glyphicon-remove" ng-click="delete(comment)"></span>
 			{{comment.title}} - Price:{{comment.price}} - Ordered: {{comment.upvotes}} <img src={{comment.image}} alt="Product Image" height="50" width="50">
 		  </div>
@@ -39,6 +40,19 @@
 
 
 
+=======
+	<form ng-submit="addComment()">
+		Product Name:<input type="text" ng-model="formContent.itemname"></input><br>
+	    Price:<input type="text" ng-model="formContent.price"></input><br>
+	    Picture URL:<input type="text" ng-model="formContent.imageurl"></input><br>
+		<button type="submit">Add Product</button>
+	</form>
+<h2>Current Products</h2>
+  <div ng-repeat="comment in comments | orderBy: 'title'">
+    <span class="glyphicon glyphicon-remove" ng-click="delete(comment)"></span>
+    {{comment.title}} - Price:{{comment.price}} - Ordered: {{comment.upvotes}} <img src={{comment.image}} alt="Product Image" height="50" width="50">
+  </div>
+>>>>>>> origin/master
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

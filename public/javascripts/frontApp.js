@@ -3,7 +3,7 @@ angular.module('comment', []).controller('MainCtrl',[
 	function($scope,$http){
 		$scope.comments = [];
 		$scope.addComment = function(){
-			var newObject = {title:$scope.formContent,upvotes:0};
+			var newObject = {title:$scope.formContent.itemname,upvotes:0,image:$scope.formContent.imageurl,price:$scope.formContent.price};
 			
 			$scope.create(newObject);
 		};

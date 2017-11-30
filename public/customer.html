@@ -18,15 +18,15 @@
 
 <form ng-submit="processOrder()">
   <div ng-repeat="comment in comments | orderBy: 'title'">
-	  <div class="card">
-	  	<input class="form-control" type="checkbox" value="{{comment.title}}" name="cart[]" ng-model="comment.checked" > {{comment.title}} - Price: {{comment.price}} <img src={{comment.image}} alt="Product Image" height="50" width="50">
+	  <div>
+	  	<input type="checkbox" value="{{comment.title}}" name="cart[]" ng-model="comment.checked" > {{comment.title}} - Price: {{comment.price}} <img src={{comment.image}} alt="Product Image" height="50" width="50">
 	  </div>
   </div>
 <button name="submit">Submit Purchase</button>
 </form>
 <h2>Shopping Cart</h2>
   <div ng-repeat="comment in cart | orderBy: 'title'">
-	  <div class="card">
+	  <div>
 	  	{{comment.title}} - Price: {{comment.price}} <img src={{comment.image}} alt="Product Image" height="50" width="50">
 	  </div>
   

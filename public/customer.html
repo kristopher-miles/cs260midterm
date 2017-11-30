@@ -6,18 +6,18 @@
 	<script src="javascripts/frontApp.js"></script>
 </head>
 <body ng-app="comment" ng-controller="MainCtrl">
-	<h1>Voter Interface</h2>
-	<h2>Canidates</h2>
+	<h1>Shopping Interface</h2>
+	<h2>Our Current Products</h2>
 
 <form ng-submit="addVotes()">
-  <div ng-repeat="comment in comments | orderBy: '-upvotes'">
+  <div ng-repeat="comment in comments | orderBy: '-title'">
 <!---    <span class="glyphicon glyphicon-remove" ng-click="delete(comment)"></span>
     <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(comment)"></span>
-   --> <input type="checkbox"> {{comment.title}} 
+   --> <input type="checkbox"> {{comment.title}} - Price: {{comment.price}}
   </div>
-<button name="submit">Submit Ballot</button>
+<button name="submit">Submit Purchase</button>
 </form>
-<h2>Submitted Ballot</h2>
+<h2>Shopping Cart</h2>
 
 </body>
 </html>

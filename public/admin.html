@@ -16,7 +16,7 @@
 <h2>Current Products</h2>
   <div ng-repeat="comment in comments | orderBy: '-upvotes'">
     <span class="glyphicon glyphicon-remove" ng-click="delete(comment)"></span>
-    {{comment.title}} - Price:{{comment.price}} - Ordered: {{comment.upvotes}}
+    {{comment.title}} - Price:{{comment.price}} - Ordered: {{comment.upvotes}} <img src={{comment.image}} alt="Product Image" height="50" width="50">
   </div>
 
 

@@ -28,7 +28,12 @@ angular.module('comment', []).controller('MainCtrl',[
 		};
 		
 		$scope.processOrder = function(){
-			
+			console.log("In process order.");
+			comments.forEach(function(element) {
+    			console.log(element);
+				incrementUpvotes(element);
+				cart.push(element);
+			});
 			
 		}
 

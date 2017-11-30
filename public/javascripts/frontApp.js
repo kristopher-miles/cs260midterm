@@ -30,9 +30,11 @@ angular.module('comment', []).controller('MainCtrl',[
 		$scope.processOrder = function(){
 			console.log("In process order.");
 			$scope.comments.forEach(function(element) {
-    			console.log(element);
-				$scope.incrementUpvotes(element);
-				$scope.cart.push(element);
+    			console.log(element+ " checked: "+element.checked);
+				if(element.checked){
+					$scope.incrementUpvotes(element);
+					$scope.cart.push(element);
+				}
 			});
 			
 		}

@@ -2,6 +2,7 @@ angular.module('comment', []).controller('MainCtrl',[
 	'$scope','$http',
 	function($scope,$http){
 		$scope.comments = [];
+		$scope.cart = [];
 		$scope.addComment = function(){
 			var newObject = {title:$scope.formContent.itemname,upvotes:0,image:$scope.formContent.imageurl,price:$scope.formContent.price};
 			
@@ -25,6 +26,11 @@ angular.module('comment', []).controller('MainCtrl',[
 		$scope.incrementUpvotes = function(comment){
 			$scope.upvote(comment);
 		};
+		
+		$scope.processOrder = function(){
+			
+			
+		}
 
 		    $scope.delete = function(comment) {
       $http.delete('/comments/' + comment._id )

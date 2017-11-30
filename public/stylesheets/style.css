@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+input{
+	padding: 3px;
+	margin: 3px;
+}
+
+h2{
+	text-align: center;
+}
